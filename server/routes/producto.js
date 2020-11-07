@@ -78,7 +78,7 @@ app.get('/productos/buscar/:termino', (req, res) => {
 });
 
 // Crear un nuevo producto
-app.post('/productos', (req, res) => {
+app.post('/productos', verificaToken, (req, res) => {
     // grabar el usuario
     // grabar categoria
     let body = req.body;
